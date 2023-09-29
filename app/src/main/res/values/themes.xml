@@ -1,0 +1,25 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">#E86339</item>
+        <item name="colorPrimaryDark">#FFF1BE</item>
+        <item name="colorAccent">#833C1F</item>
+    </style>
+
+    <!-- Launcher theme. -->
+    <style name="Launcher" parent="Theme.AppCompat.Light.NoActionBar">   <!-- PARENT ALMAK ZORUNDA  -->
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+    </style>
+
+    <!-- Launcher theme Full Screen -->
+    <style name="LauncherFullScreen">   <!-- PARENT ZORUNLU DEĞİL  -->
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+</resources>
