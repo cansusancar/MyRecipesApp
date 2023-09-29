@@ -17,14 +17,15 @@
         android:id="@+id/myAnimation"
         android:layout_width="420dp"
         android:layout_height="135dp"
-        android:layout_marginEnd="24dp"
         android:layout_marginBottom="200dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logoImageView"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_rawRes="@raw/slashanimation" />
+        app:lottie_rawRes="@raw/splashhanimation" />
 
     <ImageView
         android:id="@+id/logoImageView"
