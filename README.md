@@ -2,7 +2,7 @@
 
 
 This project is an android application of recipes written in Kotlin programming language.
-I used the technologies to develop this project below:
+I used these technologies to develop this project:
 -MVVM architecture
 -Retrofit 
 -Dagger-Hilt
