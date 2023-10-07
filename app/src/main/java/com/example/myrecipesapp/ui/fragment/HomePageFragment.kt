@@ -71,15 +71,14 @@ class HomePageFragment : Fragment() ,SearchView.OnQueryTextListener {
 
 
 
-            // Animasyonu 1 saniye gösterdikten sonra LoginFragment'a geçiş yap
+
             Handler(Looper.getMainLooper()).postDelayed({
                 Navigation.pass(R.id.homePageFragmentToAddFragment,it)
               //  Navigation.findNavController(binding)
                  //   .navigate(R.id.homePageFragmentToAddFragment)
-            }, 2000) // 1 saniye (2000 milisaniye) sonra geçiş yap
+            }, 1000)
            // Navigation.pass(R.id.homePageFragmentToAddFragment,it)
         }
-
 
         requireActivity().addMenuProvider(object :MenuProvider{
             override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {

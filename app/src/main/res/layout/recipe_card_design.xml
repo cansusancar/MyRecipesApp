@@ -24,7 +24,7 @@
                 android:id="@+id/textViewRecipeInfo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="adsa"
+                android:text="tarif bilgi"
                 android:textColor="#BC7000"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"

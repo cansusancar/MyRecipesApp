@@ -13,7 +13,6 @@ class HomePageViewModel @Inject constructor(var  repo : RecipeDaRepository) : Vi
 
     var recipesList = MutableLiveData<List<Recipe>>()
     init {
-
         modelLoadRecipes()
        recipesList= repo.repoReturnRecipes()
     }

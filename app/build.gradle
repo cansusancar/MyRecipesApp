@@ -41,6 +41,7 @@ android {
 }
 
 dependencies {
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
 
     //animasyon
@@ -75,5 +76,7 @@ dependencies {
     //dagger-hilt
     implementation 'com.google.dagger:hilt-android:2.44'
     kapt 'com.google.dagger:hilt-compiler:2.44'
+
+
 
 }

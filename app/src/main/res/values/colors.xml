@@ -6,6 +6,7 @@
         <color name="colorPrimary">#00796B</color>
         <color name="colorPrimaryDark">#005c56</color>
         <color name="colorAccent">#FFE28A</color>
+    <color name="scroll">#D5D2CA</color>
 
 
 </resources>

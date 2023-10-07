@@ -6,6 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/add"
     tools:context=".ui.fragment.AddFragment">
 
     <androidx.appcompat.widget.Toolbar
@@ -40,6 +41,7 @@
         android:layout_marginTop="50dp"
         android:layout_marginEnd="40dp"
         android:text="Ekle"
+        android:backgroundTint="#FF9800"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,6 +57,7 @@
         android:fillViewport="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+
         app:layout_constraintTop_toBottomOf="@+id/editTextRecipeName">
 
         <LinearLayout
@@ -66,7 +69,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:cardCornerRadius="8dp"
-                app:cardElevation="6dp">
+                app:cardElevation="6dp"
+                android:background="@color/scroll">
 
                 <EditText
                     android:id="@+id/editTextRecipeDiscription"
@@ -78,6 +82,7 @@
                     android:ems="10"
                     android:gravity="start|top"
                     android:hint="Yemek tarifini giriniz"
+
                     android:inputType="textMultiLine"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

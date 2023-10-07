@@ -58,12 +58,8 @@ class AddFragment : Fragment() {
                 Toast.makeText(requireContext(),"Alanlar Boş Geçilemez",Toast.LENGTH_LONG).show()
             }
         }
-
-
-
         return binding.root
     }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val tempViewModel : AddViewModel by viewModels()
