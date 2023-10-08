@@ -11,7 +11,11 @@ I used these technologies to develop this project:
 
 
 
-https://github.com/cansusancar/MyRecipesApp/assets/116024772/a91a7a05-2379-4d9a-901a-209abe761d21
 
 
+
+
+
+
+https://github.com/cansusancar/MyRecipesApp/assets/116024772/170ceb23-60d0-4e0b-a736-8f2a0465cf5c
 
