@@ -6,6 +6,9 @@ I used these technologies to develop this project:
 -MVVM architecture
 -Retrofit 
 -Dagger-Hilt
+-Lottie Animation
+-Navigation Drawer
+-Battom Navigation Bar
 -RecyclerView 
 
 
