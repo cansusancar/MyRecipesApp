@@ -4,7 +4,7 @@
         <!-- Customize your theme here. -->
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="colorPrimary">#E86339</item>
+        <item name="colorPrimary">#F8E640</item>
         <item name="colorPrimaryDark">#FFF1BE</item>
         <item name="colorAccent">#833C1F</item>
     </style>
@@ -22,4 +22,11 @@
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowContentOverlay">@null</item>
     </style>
+    <!-- Base application theme. -->
+    <style name="Base.AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+
 </resources>

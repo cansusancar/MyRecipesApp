@@ -1,9 +1,9 @@
 package com.example.myrecipesapp.ui.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.Menu
@@ -20,7 +20,6 @@ import androidx.navigation.Navigation
 import com.airbnb.lottie.LottieAnimationView
 import com.example.myrecipesapp.R
 import com.example.myrecipesapp.databinding.FragmentHomePageBinding
-import com.example.myrecipesapp.databinding.RecipeCardDesignBinding
 import com.example.myrecipesapp.ui.adapter.RecipesAdapter
 import com.example.myrecipesapp.ui.viewModel.HomePageViewModel
 import com.example.recipe_app.util.pass
@@ -29,7 +28,9 @@ import dagger.hilt.android.AndroidEntryPoint
 
 
 @AndroidEntryPoint
-class HomePageFragment : Fragment() ,SearchView.OnQueryTextListener {
+class HomePageFragment : Fragment()
+    ,SearchView.OnQueryTextListener
+{
     private lateinit var binding: FragmentHomePageBinding
 
     private lateinit var viewModel: HomePageViewModel
@@ -86,13 +87,16 @@ class HomePageFragment : Fragment() ,SearchView.OnQueryTextListener {
                 val item=menu.findItem(R.id.action_search)
                 val searchView=item.actionView as SearchView
                 searchView.setOnQueryTextListener(this@HomePageFragment)
-            }
+
+                }
 
             override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
                 return false
             }
 
         },viewLifecycleOwner,Lifecycle.State.RESUMED)
+
+
         return binding.root
     }
 
@@ -119,5 +123,8 @@ class HomePageFragment : Fragment() ,SearchView.OnQueryTextListener {
         return true
     }
 
+
 }
+
+
 

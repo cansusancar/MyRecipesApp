@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/tatlilarFragment2">
+    <fragment
+        android:id="@+id/tatlilarFragment2"
+        android:name="com.example.myrecipesapp.ui.fragment.TatlilarFragment"
+        android:label="TatlilarFragment" >
+        <action
+            android:id="@+id/action_tatlilarFragment2_to_yemeklerFragment2"
+            app:destination="@id/yemeklerFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/yemeklerFragment2"
+        android:name="com.example.myrecipesapp.ui.fragment.YemeklerFragment"
+        android:label="fragment_yemekler"
+        tools:layout="@layout/fragment_yemekler" />
+</navigation>

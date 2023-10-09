@@ -23,6 +23,6 @@ class SplashScreen : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
-        }, 5000) // 3000 milisaniye (3 saniye) sonra geçiş yapacak
+        }, 4000) // 3000 milisaniye (3 saniye) sonra geçiş yapacak
     }
 }

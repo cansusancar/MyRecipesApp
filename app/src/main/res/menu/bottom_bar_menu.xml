@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/tatlilarFragment2"
+
+        android:icon="@drawable/donut"
+        android:title="Tatlılar" />
+    <item
+        android:id="@+id/yemeklerFragment2"
+
+        android:icon="@drawable/meal"
+        android:title="Yemekler" />
+</menu>

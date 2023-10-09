@@ -5,9 +5,12 @@ import android.content.Context
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.PopupMenu
 import android.widget.Toast
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myrecipesapp.R
 import com.example.myrecipesapp.data.entity.Recipe
 import com.example.myrecipesapp.databinding.RecipeCardDesignBinding
 import com.example.myrecipesapp.ui.fragment.HomePageFragmentDirections
@@ -55,6 +58,12 @@ class RecipesAdapter(var mContext: Context,
                 val passing = HomePageFragmentDirections.homePageFragmentToDetailFragment(id = recipe.id)
                 Navigation.pass(passing,it)
                Log.e ("Recipe Adapter", "id nesnesi gönderildi")
+                /*
+
+                val passing = HomePageFragmentDirections.action_homePageFragment_to_favoriteFragment(recipeObject = recipe)
+                Navigation.pass(passing,it)
+               Log.e ("Recipe Adapter", "id nesnesi gönderildi")
+                 */
                 //putekstra ie recipe yi recipeFragment a gönder
 
             }
@@ -79,9 +88,109 @@ class RecipesAdapter(var mContext: Context,
                  */
                 Toast.makeText(mContext,"${recipe.name} Silinemez", Toast.LENGTH_LONG).show()
             }
+            t.action.setOnClickListener {
+
+                val popup = PopupMenu(mContext,t.action)
+                //hangi tasarımı göstercek
+                popup.menuInflater.inflate(R.menu.popupmenu,popup.menu)
+                popup.show()
+                popup.setOnMenuItemClickListener { item ->
+                    when(item.itemId) {
+
+                        R.id.action_favorilereEkle -> {
+                            val alert = AlertDialog.Builder(mContext)
+                            alert.setTitle("Favori Ekleme")
+
+                            alert.setMessage("${recipe.name.uppercase()} eklensin mi ?")
+
+                            alert.setPositiveButton("EVET") { dialog, which ->
+                              val alert =AlertDialog.Builder(mContext)
+                                alert.setTitle("Kategori Belirleme")
+                                alert.setMessage("${recipe.name.uppercase()}hangi kategoriye eklensin  ?")
+                                alert.setPositiveButton("Yemek") { dialog, which ->
+                                    //yemek eklemek için kodlar
+                                    Toast.makeText(
+                                        mContext,
+                                        "${recipe.name.uppercase()} Yemek Kategorisine eklendi",
+                                        Toast.LENGTH_LONG
+                                    ).show() }
+                                alert.setNegativeButton("Tatlı") { dialog, which ->
+                                    //tatlıya eklemek için kodlar
+                                    Toast.makeText(
+                                        mContext,
+                                        "${recipe.name.uppercase()} Tatlı Kategorisine eklendi",
+                                        Toast.LENGTH_LONG
+                                    ).show()
+                                }
+                                alert.show()
+                                true
+                                    /*
+                                    val recipe = Recipe(0, recipeName, recipeDescription)
+                                    add(recipe)
+                                     */
+                                Toast.makeText(
+                                   mContext,
+                                    "${recipe.name.uppercase()} Eklendi",
+                                    Toast.LENGTH_LONG
+                                ).show()
+                            }
+
+                            alert.setNegativeButton("HAYIR") { dialog, which ->
+                                Toast.makeText(
+                                    mContext,
+                                    "${recipe.name.uppercase()} Eklenmedi",
+                                    Toast.LENGTH_LONG
+                                ).show()
+                            }
+                            alert.show()
+                            true
+                        }
+                        R.id.action_favoriCikar-> {
+                            val alert = AlertDialog.Builder(mContext)
+                            alert.setTitle("Favori Ekleme")
+
+                            alert.setMessage("${recipe.name.uppercase()} favorilerden çıkarılsın mı?\"?")
+
+                            alert.setPositiveButton("EVET") { dialog, which ->
+
+                                /*
+                                    val recipe = Recipe(0, recipeName, recipeDescription)
+                                    add(recipe)
+
+
+                                     */
+                                Toast.makeText(
+                                    mContext,
+                                    "${recipe.name.uppercase()} Eklendi",
+                                    Toast.LENGTH_LONG
+                                ).show()
+                            }
+
+                            alert.setNegativeButton("HAYIR") { dialog, which ->
+                                Toast.makeText(
+                                    mContext,
+                                    "${recipe.name.uppercase()} Eklenmedi",
+                                    Toast.LENGTH_LONG
+                                ).show()
+                            }
+                            alert.show()
+                            true
+
+                        }
+
+                        else -> false
+                    }
+
+
+
+                }
+
+            }
 
 
         }
-    }
+
+
+}
 
 
