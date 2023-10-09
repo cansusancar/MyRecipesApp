@@ -20,5 +20,9 @@ I used these technologies to develop this project:
 
 
 
-https://github.com/cansusancar/MyRecipesApp/assets/116024772/170ceb23-60d0-4e0b-a736-8f2a0465cf5c
+
+
+https://github.com/cansusancar/MyRecipesApp/assets/116024772/c3bc1d99-b3e6-49c4-9896-aa963a161f39
+
+
 
