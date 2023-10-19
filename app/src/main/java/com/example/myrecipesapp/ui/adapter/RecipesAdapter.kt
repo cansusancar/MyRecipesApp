@@ -12,6 +12,7 @@ import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myrecipesapp.R
 import com.example.myrecipesapp.data.entity.Recipe
+import com.example.myrecipesapp.databinding.FragmentTatlilarBinding
 import com.example.myrecipesapp.databinding.RecipeCardDesignBinding
 import com.example.myrecipesapp.ui.fragment.HomePageFragmentDirections
 import com.example.myrecipesapp.ui.viewModel.HomePageViewModel
@@ -21,13 +22,17 @@ import com.google.android.material.snackbar.Snackbar
 
 class RecipesAdapter(var mContext: Context,
                          var recipesList:List<Recipe>,
-                         var viewModel: HomePageViewModel
+                         var viewModel: HomePageViewModel,
+                     private val onFavoriteClickListener: (Recipe) -> Unit,
+                     private val onFavoriteClickListener2: (Recipe) -> Unit,
+                     private val onFavoriteClickListener3: (Recipe) -> Unit
     )
         : RecyclerView.Adapter<RecipesAdapter.CardDesignHolder>() {
 
         inner class CardDesignHolder(design: RecipeCardDesignBinding) : RecyclerView.ViewHolder(design.root) {
 
             var design: RecipeCardDesignBinding
+
 
             init {
               this.design= design
@@ -106,16 +111,20 @@ class RecipesAdapter(var mContext: Context,
                             alert.setPositiveButton("EVET") { dialog, which ->
                               val alert =AlertDialog.Builder(mContext)
                                 alert.setTitle("Kategori Belirleme")
-                                alert.setMessage("${recipe.name.uppercase()}hangi kategoriye eklensin  ?")
+                                alert.setMessage("${recipe.name.uppercase()} hangi kategoriye eklensin  ?")
                                 alert.setPositiveButton("Yemek") { dialog, which ->
-                                    //yemek eklemek için kodlar
+                                    //favori yemek fragmentına eklemek için kodlar
+                                    onFavoriteClickListener3(recipe)
                                     Toast.makeText(
                                         mContext,
                                         "${recipe.name.uppercase()} Yemek Kategorisine eklendi",
                                         Toast.LENGTH_LONG
                                     ).show() }
                                 alert.setNegativeButton("Tatlı") { dialog, which ->
-                                    //tatlıya eklemek için kodlar
+                                    //favori tatlı fragmentına  eklemek için kodlar
+                                    onFavoriteClickListener(recipe)
+
+
                                     Toast.makeText(
                                         mContext,
                                         "${recipe.name.uppercase()} Tatlı Kategorisine eklendi",
@@ -152,20 +161,16 @@ class RecipesAdapter(var mContext: Context,
                             alert.setMessage("${recipe.name.uppercase()} favorilerden çıkarılsın mı?\"?")
 
                             alert.setPositiveButton("EVET") { dialog, which ->
-
-                                /*
-                                    val recipe = Recipe(0, recipeName, recipeDescription)
-                                    add(recipe)
-
-
-                                     */
+                                onFavoriteClickListener2(recipe)
+                                alert.show()
+                                true
                                 Toast.makeText(
                                     mContext,
-                                    "${recipe.name.uppercase()} Eklendi",
+                                    "${recipe.name.uppercase()} Favorilerden çıkarıldı",
                                     Toast.LENGTH_LONG
                                 ).show()
-                            }
 
+                            }
                             alert.setNegativeButton("HAYIR") { dialog, which ->
                                 Toast.makeText(
                                     mContext,
@@ -173,9 +178,9 @@ class RecipesAdapter(var mContext: Context,
                                     Toast.LENGTH_LONG
                                 ).show()
                             }
-                            alert.show()
-                            true
 
+                                alert.show()
+                                true
                         }
 
                         else -> false

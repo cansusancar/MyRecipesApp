@@ -20,8 +20,8 @@
             android:id="@+id/homePageFragmentToAddFragment"
             app:destination="@id/addFragment" />
         <action
-            android:id="@+id/action_homePageFragment_to_favoriteFragment"
-            app:destination="@id/favoriteFragment" />
+            android:id="@+id/action_homePageFragment_to_hilt_TatlilarFragment"
+            app:destination="@id/hilt_TatlilarFragment" />
     </fragment>
     <fragment
         android:id="@+id/updateFragment"
@@ -46,12 +46,11 @@
         android:label="fragment_add"
         tools:layout="@layout/fragment_add" />
     <fragment
-        android:id="@+id/favoriteFragment"
-        android:name="com.example.myrecipesapp.ui.fragment.FavoriteFragment"
-        android:label="fragment_favorite"
-        tools:layout="@layout/fragment_favorite" >
+        android:id="@+id/hilt_TatlilarFragment"
+        android:name="com.example.myrecipesapp.ui.fragment.Hilt_TatlilarFragment"
+        android:label="Hilt_TatlilarFragment" >
         <argument
-            android:name="recipeObject"
+            android:name="new"
             app:argType="com.example.myrecipesapp.data.entity.Recipe" />
     </fragment>
 </navigation>

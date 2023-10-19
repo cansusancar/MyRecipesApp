@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.recipesActivity -> {
                     startActivity(Intent(this, RecipesActivity::class.java))
                 }
-                // Diğer öğeleri burada ekleyin
+
             }
 
             // Drawer'ı kapat

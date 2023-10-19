@@ -18,7 +18,7 @@ class SplashScreen : AppCompatActivity() {
         binding = ActivitySplashScreenBinding.inflate(layoutInflater)
         lottieAnimationView = binding.myAnimation
         lottieAnimationView.playAnimation()
-        // Splash ekranını belirli bir süre sonra ana uygulama ekranına geçiş yapacak şekilde ayarlayabilirsiniz.
+        // Splash ekranını belirli bir süre sonra ana uygulama ekranına geçiş yapacak şekilde ayarlama
         Handler(Looper.getMainLooper()).postDelayed({
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)

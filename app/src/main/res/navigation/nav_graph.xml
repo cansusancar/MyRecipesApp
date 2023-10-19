@@ -11,10 +11,21 @@
         <action
             android:id="@+id/action_tatlilarFragment2_to_yemeklerFragment2"
             app:destination="@id/yemeklerFragment2" />
+        <action
+            android:id="@+id/tatlilartodetail"
+            app:destination="@id/hilt_DetailFragment" />
     </fragment>
     <fragment
         android:id="@+id/yemeklerFragment2"
         android:name="com.example.myrecipesapp.ui.fragment.YemeklerFragment"
         android:label="fragment_yemekler"
         tools:layout="@layout/fragment_yemekler" />
+    <fragment
+        android:id="@+id/hilt_DetailFragment"
+        android:name="com.example.myrecipesapp.ui.fragment.Hilt_DetailFragment"
+        android:label="Hilt_DetailFragment" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
 </navigation>

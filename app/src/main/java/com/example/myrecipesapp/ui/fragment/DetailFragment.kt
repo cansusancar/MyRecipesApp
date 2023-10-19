@@ -31,8 +31,7 @@ class DetailFragment : Fragment() {
             viewModel.modelGetRecipeDetail(recipeId)
 
 
-           viewModel.recipeDetail.observe(viewLifecycleOwner){ recipeDetail->//Recipe type
-               //bu kısım eğer birden fazla detay gelirse?
+           viewModel.recipeDetail.observe(viewLifecycleOwner){ recipeDetail->
 
             // design.recipeDetailIdName.text= "${recipeDetail.id} - ${recipeDetail.name}"
                design.toolbar.title= "${recipeDetail.id}-${recipeDetail.name}"
