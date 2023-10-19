@@ -7,7 +7,11 @@ This project is written with Kotlin programming language in Android Studio. It i
 
 
 
-https://github.com/cansusancar/MyRecipesApp/assets/116024772/c3bc1d99-b3e6-49c4-9896-aa963a161f39
+
+
+https://github.com/cansusancar/MyRecipesApp/assets/116024772/d6bea175-6a7f-4860-87af-7ac8403ca8ac
+
+
 
 
 
